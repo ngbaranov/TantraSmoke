@@ -14,5 +14,5 @@ class DBSessionMiddleware(BaseMiddleware):
         data: dict[str, Any]
     ) -> Any:
         async with self.session_pool() as session:
-            data["session"] = session
+            data["session_with_commit"] = session
             return await handler(event, data)

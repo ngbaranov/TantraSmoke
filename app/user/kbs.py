@@ -10,7 +10,7 @@ def main_user_kb(user_id: int) -> InlineKeyboardMarkup:
     kb.add(InlineKeyboardButton(text="📅 Мои брони", callback_data="my_bookings"))
     kb.add(InlineKeyboardButton(text="ℹ️ О нас", callback_data="about_us"))
 
-    if user_id in settings.ADMIN_IDS:
+    if user_id in settings.get_admin_ids():
         kb.add(InlineKeyboardButton(text="🔐 Админ-панель", callback_data="admin_panel"))
 
     kb.adjust(1)
@@ -23,7 +23,7 @@ def user_booking_kb(user_id: int, book: bool = False) -> InlineKeyboardMarkup:
         kb.add(InlineKeyboardButton(text="🎫 Мои брони", callback_data="my_booking_all"))
     kb.add(InlineKeyboardButton(text="🍽️ Забронировать столик", callback_data="book_table"))
     kb.add(InlineKeyboardButton(text="🏠 На главную", callback_data="back_home"))
-    if user_id in settings.ADMIN_IDS:
+    if user_id in settings.get_admin_ids():
         kb.add(InlineKeyboardButton(text="🔐 Админ-панель", callback_data="admin_panel"))
     kb.adjust(1)
     return kb.as_markup()

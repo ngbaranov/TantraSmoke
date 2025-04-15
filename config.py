@@ -3,6 +3,7 @@ from typing import List
 
 from loguru import logger
 from pydantic_settings import BaseSettings, SettingsConfigDict
+from typing import Optional, List
 
 
 class Settings(BaseSettings):
@@ -18,6 +19,8 @@ class Settings(BaseSettings):
     REDIS_PORT: int
     REDIS_DB: int
 
+    ADMIN_IDS_RAW: Optional[str] = ""
+
 
 
 
@@ -31,6 +34,11 @@ class Settings(BaseSettings):
 
     def get_redis_url(self):
         return f"redis://{self.REDIS_HOST}:{self.REDIS_PORT}/{self.REDIS_DB}"
+
+    def get_admin_ids(self) -> List[int]:
+        if not self.ADMIN_IDS_RAW:
+            return []
+        return [int(x.strip()) for x in self.ADMIN_IDS_RAW.split(",") if x.strip().isdigit()]
 
 
 settings = Settings()
