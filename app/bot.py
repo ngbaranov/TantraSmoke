@@ -4,8 +4,10 @@ from aiogram import Bot, Dispatcher
 from aiogram.enums import ParseMode
 from aiogram.client.default import DefaultBotProperties
 from aiogram.fsm.storage.redis import RedisStorage, DefaultKeyBuilder
+from aiogram_dialog import setup_dialogs
 from redis.asyncio import Redis
 
+from app.booking.dialog import booking_dialog
 from config import settings
 from user.router import router as user_router
 
@@ -30,6 +32,8 @@ async def main():
     dp = Dispatcher(storage=storage, key_builder= DefaultKeyBuilder(with_destiny=True))
     dp.update.middleware(DBSessionMiddleware(get_db))
 
+    setup_dialogs(dp)
+    dp.include_router(booking_dialog)
     dp.include_router(user_router)
 
 
