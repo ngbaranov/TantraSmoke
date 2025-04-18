@@ -6,6 +6,7 @@ from app.booking.schemas import SCapacity, SNevBooking
 from app.user.kbs import main_user_kb
 # from app.config import broker
 from app.dao.dao import BookingDAO, TimeSlotUserDAO, TableDAO
+from app.utils.dialog import get_session
 
 
 async def cancel_logic(callback: CallbackQuery, button: Button, dialog_manager: DialogManager):
@@ -16,7 +17,7 @@ async def cancel_logic(callback: CallbackQuery, button: Button, dialog_manager: 
 
 async def process_add_count_capacity(callback: CallbackQuery, button: Button, dialog_manager: DialogManager):
     """Обработчик выбора количества гостей."""
-    session = dialog_manager.middleware_data.get("session_without_commit")
+    session = get_session(dialog_manager)
     selected_capacity = int(button.widget_id)
     dialog_manager.dialog_data["capacity"] = selected_capacity
     dialog_manager.dialog_data['tables'] = await TableDAO(session).find_all(SCapacity(capacity=selected_capacity))
@@ -26,7 +27,7 @@ async def process_add_count_capacity(callback: CallbackQuery, button: Button, di
 
 async def on_table_selected(callback: CallbackQuery, widget, dialog_manager: DialogManager, item_id: str):
     """Обработчик выбора стола."""
-    session = dialog_manager.middleware_data.get("session_without_commit")
+    session = get_session(dialog_manager)
     table_id = int(item_id)
     selected_table = await TableDAO(session).find_one_or_none_by_id(table_id)
     dialog_manager.dialog_data["selected_table"] = selected_table
@@ -37,7 +38,7 @@ async def on_table_selected(callback: CallbackQuery, widget, dialog_manager: Dia
 async def process_date_selected(callback: CallbackQuery, widget, dialog_manager: DialogManager, selected_date: date):
     """Обработчик выбора даты."""
     dialog_manager.dialog_data["booking_date"] = selected_date
-    session = dialog_manager.middleware_data.get("session_without_commit")
+    session = get_session(dialog_manager)
     selected_table = dialog_manager.dialog_data["selected_table"]
     slots = await BookingDAO(session).get_available_time_slots(table_id=selected_table.id, booking_date=selected_date)
     if slots:
@@ -51,7 +52,7 @@ async def process_date_selected(callback: CallbackQuery, widget, dialog_manager:
 
 async def process_slots_selected(callback: CallbackQuery, widget, dialog_manager: DialogManager, item_id: str):
     """Обработчик выбора слота."""
-    session = dialog_manager.middleware_data.get("session_without_commit")
+    session = get_session(dialog_manager)
     slot_id = int(item_id)
     selected_slot = await TimeSlotUserDAO(session).find_one_or_none_by_id(slot_id)
     await callback.answer(f"Выбрано время с {selected_slot.start_time} до {selected_slot.end_time}")
@@ -61,7 +62,7 @@ async def process_slots_selected(callback: CallbackQuery, widget, dialog_manager
 
 async def on_confirmation(callback: CallbackQuery, widget, dialog_manager: DialogManager, **kwargs):
     """Обработчик подтверждения бронирования."""
-    session = dialog_manager.middleware_data.get("session_with_commit")
+    session = get_session(dialog_manager)
 
     # Получаем выбранные данные
     selected_table = dialog_manager.dialog_data['selected_table']
