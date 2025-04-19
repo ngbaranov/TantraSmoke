@@ -17,19 +17,31 @@ from app.user.schemas import SUser
 router = Router()
 
 
+# @router.message(CommandStart())
+# async def cmd_start(message: Message, session_with_commit: AsyncSession, state: FSMContext):
+#     await state.clear()
+#     user_data = message.from_user
+#     user_id = user_data.id
+#     user_info = await UserDAO(session_with_commit).find_one_or_none_by_id(user_id)
+#     if user_info is None:
+#         user_schema = SUser(id=user_id, first_name=user_data.first_name,
+#                             last_name=user_data.last_name, username=user_data.username)
+#         await UserDAO(session_with_commit).add(user_schema)
+#     text = ("👋 Добро пожаловать в Binary Bites! 🍽️\n\nЗдесь каждый байт вкуса закодирован в удовольствие. 😋💻\n"
+#             "Используйте клавиатуру ниже, чтобы зарезервировать свой столик и избежать переполнения буфера! 🔢🍴")
+#     await message.answer(text, reply_markup=main_user_kb(user_id))
+
+
+
 @router.message(CommandStart())
-async def cmd_start(message: Message, session_with_commit: AsyncSession, state: FSMContext):
+async def cmd_start(message: Message, state: FSMContext):
     await state.clear()
-    user_data = message.from_user
-    user_id = user_data.id
-    user_info = await UserDAO(session_with_commit).find_one_or_none_by_id(user_id)
-    if user_info is None:
-        user_schema = SUser(id=user_id, first_name=user_data.first_name,
-                            last_name=user_data.last_name, username=user_data.username)
-        await UserDAO(session_with_commit).add(user_schema)
-    text = ("👋 Добро пожаловать в Binary Bites! 🍽️\n\nЗдесь каждый байт вкуса закодирован в удовольствие. 😋💻\n"
-            "Используйте клавиатуру ниже, чтобы зарезервировать свой столик и избежать переполнения буфера! 🔢🍴")
-    await message.answer(text, reply_markup=main_user_kb(user_id))
+    text = (
+        "\U0001F44B Добро пожаловать в Binary Bites! \U0001F37D️\n\n"
+        "Здесь каждый байт вкуса закодирован в удовольствие. \U0001F60B\U0001F4BB\n"
+        "Используйте клавиатуру ниже, чтобы зарезервировать свой столик и избежать переполнения буфера! \U0001F522\U0001F374"
+    )
+    await message.answer(text, reply_markup=main_user_kb(message.from_user.id))
 
 
 @router.callback_query(F.data == "about_us")
@@ -55,10 +67,10 @@ async def start_dialog(call: CallbackQuery, dialog_manager: DialogManager):
 
 
 @router.callback_query(F.data == "my_bookings")
-async def show_my_bookings(call: CallbackQuery, session_without_commit: AsyncSession):
+async def show_my_bookings(call: CallbackQuery, session: AsyncSession):
     await call.answer("Мои брони")
     user_filter = create_model('UserIDModel', user_id=(int, ...))(user_id=call.from_user.id)
-    my_bookings = await BookingDAO(session_without_commit).find_all(user_filter)
+    my_bookings = await BookingDAO(session).find_all(user_filter)
     count_booking = len(my_bookings)
     if count_booking:
         book = True
@@ -72,9 +84,9 @@ async def show_my_bookings(call: CallbackQuery, session_without_commit: AsyncSes
 
 
 @router.callback_query(F.data == "my_booking_all")
-async def show_all_my_bookings(call: CallbackQuery, session_without_commit: AsyncSession):
+async def show_all_my_bookings(call: CallbackQuery, session: AsyncSession):
     await call.answer("Все мои брони")
-    user_bookings = await BookingDAO(session_without_commit).get_bookings_with_details(call.from_user.id)
+    user_bookings = await BookingDAO(session).get_bookings_with_details(call.from_user.id)
 
     if not user_bookings:
         await call.message.edit_text("😔 У вас пока нет активных бронирований.", reply_markup=None)

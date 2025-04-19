@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdfac2ed-14f4-44dc-bda6-2a7a75cb282c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/utils/dialog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dao/init_logic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dao/slots.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/booking/getters.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/booking/getters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/booking/handlers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/booking/handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/middleware.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/middleware.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/user/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/user/router.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +38,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ngbaranov/TantraSmoke.git&quot;,
-    &quot;accountId&quot;: &quot;5bcbe021-9c8b-448f-81de-2e730008d0cd&quot;
+    &quot;url&quot;: &quot;git@github.com:/ngbaranov/TantraSmoke.git&quot;,
+    &quot;accountId&quot;: &quot;b6407548-ca16-4568-9de6-8ef7becfd38a&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -51,14 +57,25 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;com.codeium.enabled&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/nikolai/PycharmProjects/TantraSmoke/app/dao&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/dao" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="bot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="TantraSmoke" />
@@ -112,6 +129,12 @@
       <workItem from="1744889558494" duration="131000" />
       <workItem from="1744889721149" duration="1978000" />
       <workItem from="1744970997166" duration="3476000" />
+      <workItem from="1744993860221" duration="6131000" />
+      <workItem from="1745036986983" duration="255000" />
+      <workItem from="1745037269955" duration="6581000" />
+      <workItem from="1745069433470" duration="498000" />
+      <workItem from="1745070046286" duration="2212000" />
+      <workItem from="1745072406788" duration="25000" />
     </task>
     <servers />
   </component>
@@ -119,6 +142,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TantraSmoke$bot.coverage" NAME="bot Coverage Results" MODIFIED="1744973870212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/TantraSmoke$bot.coverage" NAME="bot Coverage Results" MODIFIED="1745072072268" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
   </component>
 </project>

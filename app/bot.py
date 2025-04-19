@@ -10,9 +10,11 @@ from redis.asyncio import Redis
 from app.booking.dialog import booking_dialog
 from config import settings
 from user.router import router as user_router
+from admin.router import router as admin_router
 
-from middleware import DBSessionMiddleware
+from middleware import DBSessionMiddleware, UserEnsureMiddleware
 from db import get_db
+from db import async_session_maker
 
 logging.basicConfig(
     level=logging.INFO,
@@ -30,11 +32,13 @@ async def main():
     redis = Redis.from_url(settings.get_redis_url())
     storage = RedisStorage(redis=redis, key_builder=DefaultKeyBuilder(with_destiny=True))
     dp = Dispatcher(storage=storage, key_builder= DefaultKeyBuilder(with_destiny=True))
-    dp.update.middleware(DBSessionMiddleware(get_db))
+    dp.update.middleware(DBSessionMiddleware(lambda: async_session_maker()))
+    dp.update.middleware(UserEnsureMiddleware())
 
     setup_dialogs(dp)
     dp.include_router(booking_dialog)
     dp.include_router(user_router)
+    dp.include_router(admin_router)
 
 
 
