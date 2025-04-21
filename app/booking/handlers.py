@@ -34,12 +34,16 @@ async def process_add_count_capacity(callback: CallbackQuery, button: Button, di
     await dialog_manager.next()
 
 
-async def on_table_selected(callback: CallbackQuery, widget, dialog_manager: DialogManager, item_id: str):
-    """Обработчик выбора стола."""
+async def on_table_selected(callback: CallbackQuery, button: Button, dialog_manager: DialogManager):
+    """Обработчик выбора стола по номеру кнопки."""
     session = get_session(dialog_manager)
-    table_id = int(item_id)
-    # Получаем и сериализуем только простые данные
+    table_id = int(button.widget_id.replace("table_", ""))
     table = await TableDAO(session).find_one_or_none_by_id(table_id)
+
+    if not table:
+        await callback.answer("Стол не найден")
+        return
+
     dialog_manager.dialog_data["selected_table"] = {
         "id": table.id,
         "capacity": table.capacity,

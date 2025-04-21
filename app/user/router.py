@@ -120,19 +120,22 @@ async def show_all_my_bookings(call: CallbackQuery, session: AsyncSession):
 
 
 @router.callback_query(F.data.startswith("cancel_book_"))
-async def cancel_booking(call: CallbackQuery, session_with_commit: AsyncSession):
+async def cancel_booking(call: CallbackQuery, session: AsyncSession):
     book_id = int(call.data.split("_")[-1])
-    booking_dao = BookingDAO(session_with_commit)
+    booking_dao = BookingDAO(session)
     await booking_dao.cancel_book(book_id)
+    await session.commit()
     await call.answer("Бронь отменена!", show_alert=True)
     # await broker.publish(f"Пользователь отменил запись о брони с ID {book_id}", "admin_msg")
     await call.message.edit_reply_markup(reply_markup=cancel_book_kb(book_id))
 
 
 @router.callback_query(F.data.startswith("dell_book_"))
-async def delete_booking(call: CallbackQuery, session_with_commit: AsyncSession):
+async def delete_booking(call: CallbackQuery, session: AsyncSession):
     book_id = int(call.data.split("_")[-1])
-    await BookingDAO(session_with_commit).delete_book(book_id)
+    await BookingDAO(session).delete_book(book_id)
+    await session.commit()
+
     await call.answer("Запись о брони удалена!", show_alert=True)
     # await broker.publish(f"Пользователь удалил запись о брони с ID {book_id}", "admin_msg")
     await call.message.delete()

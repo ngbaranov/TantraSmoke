@@ -1,11 +1,16 @@
 from datetime import date, timedelta, timezone
 from aiogram_dialog import Window
-from aiogram_dialog.widgets.kbd import Button, Group, ScrollingGroup, Select, Calendar, CalendarConfig, Back, Cancel
+from aiogram_dialog.widgets.kbd import Button, Group, ScrollingGroup, Select, Calendar, CalendarConfig, Back, Cancel, \
+    Row
 from aiogram_dialog.widgets.text import Const, Format
+
 from app.booking.getters import get_all_tables, get_all_available_slots, get_confirmed_data
 from app.booking.handlers import (process_add_count_capacity, on_table_selected,
                                       process_date_selected, process_slots_selected, on_confirmation, cancel_logic)
 from app.booking.state import BookingState
+from aiogram_dialog.widgets.media import StaticMedia
+from aiogram.types import FSInputFile
+
 
 
 def get_capacity_window() -> Window:
@@ -26,27 +31,30 @@ def get_capacity_window() -> Window:
 
 
 def get_table_window() -> Window:
-    """Окно выбора стола."""
     return Window(
-        Format("{text_table}"),
-        ScrollingGroup(
-            Select(
-                Format("Стол №{item[id]} - {item[description]}"),
-                id="table_select",
-                item_id_getter=lambda item: str(item["id"]),
-                items="tables",
-                on_click=on_table_selected,
+        Const("📍 Выберите столик по схеме ниже:"),
+        StaticMedia(
+            path="static/kafe1.png",  # ✅ проверь, что файл по этому пути реально есть
+            type="photo"
+
+        ),
+        Group(
+            Row(
+                *[
+                    Button(
+                        Const(str(i)),
+                        id=f"table_{i}",
+                        on_click=on_table_selected
+                    ) for i in range(1, 10)  # ⚠️ укажи количество столов по схеме
+                ],
             ),
-            id="tables_scrolling",
-            width=1,
-            height=1,
+            width=4,  # по 4 кнопки в ряд
         ),
         Group(
             Back(Const("Назад")),
             Cancel(Const("Отмена"), on_click=cancel_logic),
             width=2
         ),
-        getter=get_all_tables,
         state=BookingState.table,
     )
 

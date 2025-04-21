@@ -47,7 +47,6 @@ class UserEnsureMiddleware(BaseMiddleware):
                 user = getattr(message, "from_user", None)
 
         if user is None:
-            logger.warning("⚠️ Не удалось извлечь from_user из события: {}", event)
             return await handler(event, data)
 
         logger.info("🔍 Проверка пользователя: {} (@{})", user.id, user.username)
