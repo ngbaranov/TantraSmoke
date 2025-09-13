@@ -412,3 +412,383 @@ WHERE tables.capacity = $1::INTEGER]
 2025-04-20 at 13:21:34 | INFO | Поиск всех записей Booking по фильтрам: {'user_id': 830117694}
 2025-04-20 at 13:21:35 | INFO | Найдено 2 записей.
 2025-04-20 at 13:21:42 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-21 at 19:11:18 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-21 at 19:11:18 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-04-21 at 19:11:21 | INFO | Запись User с ID 830117694 найдена.
+2025-04-21 at 19:11:25 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-21 at 19:11:26 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-21 at 19:11:26 | INFO | Поиск всех записей Table по фильтрам: {'capacity': 2}
+2025-04-21 at 19:11:27 | INFO | Найдено 3 записей.
+2025-04-21 at 19:11:37 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-21 at 19:11:38 | INFO | Запись Table с ID 9 найдена.
+2025-04-21 at 19:11:42 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-21 at 19:11:48 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-21 at 19:11:54 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-21 at 19:11:54 | INFO | Запись TimeSlot с ID 7 найдена.
+2025-04-21 at 19:12:17 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-21 at 19:12:17 | INFO | 📦 on_confirmation() вызван
+2025-04-21 at 19:12:18 | INFO | Добавление записи Booking с параметрами: {'user_id': 830117694, 'table_id': 9, 'time_slot_id': 7, 'date': datetime.date(2025, 4, 22), 'status': 'booked'}
+2025-04-21 at 19:12:18 | INFO | Запись Booking успешно добавлена.
+2025-04-21 at 19:12:23 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-21 at 19:12:23 | INFO | Поиск всех записей Booking по фильтрам: {'user_id': 830117694}
+2025-04-21 at 19:12:23 | INFO | Найдено 3 записей.
+2025-04-21 at 19:12:30 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-21 at 19:12:36 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-21 at 19:12:41 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-21 at 19:12:43 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-21 at 19:12:44 | INFO | Удалено 1 записей.
+2025-04-21 at 19:12:47 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-21 at 19:12:47 | INFO | Удалено 1 записей.
+2025-04-21 at 19:12:52 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-21 at 19:12:56 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-21 at 19:12:56 | INFO | Удалено 1 записей.
+2025-04-21 at 19:12:59 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-24 at 21:20:17 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-24 at 21:20:22 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-25 at 06:00:13 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-25 at 06:00:13 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-04-25 at 06:00:18 | INFO | Запись User с ID 830117694 найдена.
+2025-04-25 at 06:00:21 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-25 at 06:00:24 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-25 at 06:33:51 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-25 at 06:39:36 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-25 at 06:39:39 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-25 at 06:39:41 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-25 at 06:47:47 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-26 at 20:34:44 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-26 at 20:35:18 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-26 at 20:35:18 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-04-26 at 20:35:23 | INFO | Запись User с ID 830117694 найдена.
+2025-04-26 at 20:35:26 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-26 at 20:35:30 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-27 at 18:14:13 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-27 at 18:14:13 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-04-27 at 18:14:16 | INFO | Запись User с ID 830117694 найдена.
+2025-04-27 at 18:14:19 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-27 at 18:14:21 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-27 at 18:14:21 | INFO | Поиск всех записей Table по фильтрам: {'capacity': 3}
+2025-04-27 at 18:14:22 | INFO | Найдено 1 записей.
+2025-04-27 at 18:14:25 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-27 at 18:14:25 | INFO | Запись Table с ID 2 найдена.
+2025-04-27 at 18:14:30 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-27 at 18:14:35 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-29 at 21:03:42 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-29 at 21:03:42 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-04-29 at 21:03:49 | INFO | Запись User с ID 830117694 найдена.
+2025-04-29 at 21:04:13 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-29 at 21:04:17 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-29 at 21:04:26 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-29 at 21:18:41 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-29 at 21:18:41 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-04-29 at 21:18:48 | INFO | Запись User с ID 830117694 найдена.
+2025-04-29 at 21:18:51 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-29 at 21:18:58 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-29 at 21:18:58 | INFO | Запись TimeSlot с ID 3 найдена.
+2025-04-29 at 21:19:02 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-29 at 21:19:02 | INFO | 📦 on_confirmation() вызван
+2025-04-29 at 21:19:03 | INFO | Добавление записи Booking с параметрами: {'user_id': 830117694, 'table_id': 2, 'time_slot_id': 3, 'date': datetime.date(2025, 4, 30), 'status': 'booked'}
+2025-04-29 at 21:19:03 | INFO | Запись Booking успешно добавлена.
+2025-04-29 at 21:19:13 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-29 at 21:19:13 | INFO | Поиск всех записей Booking по фильтрам: {'user_id': 830117694}
+2025-04-29 at 21:19:14 | INFO | Найдено 3 записей.
+2025-04-29 at 21:19:18 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-29 at 21:45:08 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-04-29 at 21:45:12 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-07 at 18:00:47 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-07 at 18:00:47 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-09-07 at 18:13:54 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-07 at 18:13:54 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-09-07 at 18:13:54 | INFO | Запись User с ID 830117694 не найдена.
+2025-09-07 at 18:13:54 | INFO | 📥 Добавление нового пользователя в БД: 830117694
+2025-09-07 at 18:13:54 | INFO | Добавление записи User с параметрами: {'id': 830117694, 'username': 'Nikolai_Baranov', 'first_name': 'Николай', 'last_name': 'Баранов'}
+2025-09-07 at 18:13:54 | INFO | Запись User успешно добавлена.
+2025-09-07 at 18:13:54 | INFO | ✅ Пользователь успешно добавлен: 830117694
+2025-09-07 at 18:14:10 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-07 at 18:14:12 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-07 at 18:14:12 | INFO | Поиск всех записей Table по фильтрам: {'capacity': 2}
+2025-09-07 at 18:14:12 | INFO | Найдено 0 записей.
+2025-09-07 at 18:14:18 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-07 at 18:14:18 | INFO | Запись Table с ID 7 не найдена.
+2025-09-07 at 18:14:23 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-07 at 18:14:23 | INFO | Запись Table с ID 7 не найдена.
+2025-09-07 at 18:14:27 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-07 at 18:14:27 | INFO | Запись Table с ID 6 не найдена.
+2025-09-07 at 18:14:31 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-07 at 18:14:31 | INFO | Запись Table с ID 2 не найдена.
+2025-09-07 at 18:14:34 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-07 at 18:14:34 | INFO | Запись Table с ID 1 не найдена.
+2025-09-07 at 18:14:36 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-07 at 18:14:36 | INFO | Запись Table с ID 4 не найдена.
+2025-09-07 at 18:14:38 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-07 at 18:14:38 | INFO | Запись Table с ID 4 не найдена.
+2025-09-07 at 18:16:31 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-07 at 18:16:31 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-09-07 at 18:16:31 | INFO | Запись User с ID 830117694 найдена.
+2025-09-07 at 18:16:39 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-07 at 18:16:39 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-09-07 at 18:16:39 | INFO | Запись User с ID 830117694 найдена.
+2025-09-07 at 18:16:41 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-07 at 18:16:41 | INFO | Запись Table с ID 2 не найдена.
+2025-09-07 at 18:18:56 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-07 at 18:19:00 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-07 at 18:19:05 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-07 at 18:19:06 | INFO | Подсчет количества записей User по фильтру: {}
+2025-09-07 at 18:19:06 | INFO | Найдено 1 записей.
+2025-09-07 at 18:19:10 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-07 at 18:19:12 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:29:52 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:29:56 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:31:36 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:31:36 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-09-09 at 20:31:36 | INFO | Запись User с ID 830117694 найдена.
+2025-09-09 at 20:33:57 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:33:57 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-09-09 at 20:33:57 | INFO | Запись User с ID 830117694 найдена.
+2025-09-09 at 20:34:07 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:34:07 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-09-09 at 20:34:07 | INFO | Запись User с ID 830117694 найдена.
+2025-09-09 at 20:34:14 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:34:14 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-09-09 at 20:34:14 | INFO | Запись User с ID 830117694 найдена.
+2025-09-09 at 20:35:31 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:35:31 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-09-09 at 20:35:31 | INFO | Запись User с ID 830117694 найдена.
+2025-09-09 at 20:48:08 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:48:08 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-09-09 at 20:48:08 | INFO | Запись User с ID 830117694 найдена.
+2025-09-09 at 20:48:10 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:48:13 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:48:13 | INFO | Подсчет количества записей Table по фильтру: {}
+2025-09-09 at 20:48:13 | INFO | Найдено 0 записей.
+2025-09-09 at 20:49:00 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:49:07 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:49:07 | INFO | Подсчет количества записей Table по фильтру: {}
+2025-09-09 at 20:49:07 | INFO | Найдено 0 записей.
+2025-09-09 at 20:50:32 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:50:36 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:50:36 | INFO | Подсчет количества записей Table по фильтру: {}
+2025-09-09 at 20:50:36 | INFO | Найдено 0 записей.
+2025-09-09 at 20:50:44 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:50:49 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:50:49 | INFO | Подсчет количества записей Table по фильтру: {}
+2025-09-09 at 20:50:49 | INFO | Найдено 0 записей.
+2025-09-09 at 20:58:54 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:58:54 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-09-09 at 20:58:54 | INFO | Запись User с ID 830117694 найдена.
+2025-09-09 at 20:58:56 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:58:58 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:58:58 | INFO | Подсчет количества записей Table по фильтру: {}
+2025-09-09 at 20:58:58 | INFO | Найдено 0 записей.
+2025-09-09 at 20:58:58 | INFO | Добавление записи Table с параметрами: {'id': 1, 'capacity': 2, 'description': 'Столик для двоих у окна'}
+2025-09-09 at 20:58:58 | INFO | Запись Table успешно добавлена.
+2025-09-09 at 20:58:58 | INFO | Добавление записи Table с параметрами: {'id': 2, 'capacity': 4, 'description': 'Семейный столик на 4 персоны'}
+2025-09-09 at 20:58:58 | INFO | Запись Table успешно добавлена.
+2025-09-09 at 20:58:58 | INFO | Добавление записи Table с параметрами: {'id': 3, 'capacity': 6, 'description': 'Большой стол для компании'}
+2025-09-09 at 20:58:58 | INFO | Запись Table успешно добавлена.
+2025-09-09 at 20:58:58 | INFO | Добавление записи Table с параметрами: {'id': 4, 'capacity': 2, 'description': 'Уютный столик в углу'}
+2025-09-09 at 20:58:58 | INFO | Запись Table успешно добавлена.
+2025-09-09 at 20:58:58 | INFO | Добавление записи Table с параметрами: {'id': 5, 'capacity': 8, 'description': 'VIP стол для больших компаний'}
+2025-09-09 at 20:58:58 | INFO | Запись Table успешно добавлена.
+2025-09-09 at 20:59:06 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:59:09 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:59:13 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:59:13 | INFO | Поиск всех записей Table по фильтрам: {'capacity': 2}
+2025-09-09 at 20:59:13 | INFO | Найдено 2 записей.
+2025-09-09 at 20:59:19 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:59:19 | INFO | Запись Table с ID 6 не найдена.
+2025-09-09 at 20:59:26 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:59:26 | INFO | Запись Table с ID 4 найдена.
+2025-09-09 at 20:59:36 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:59:46 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:59:48 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-09 at 20:59:48 | INFO | Поиск всех записей Booking по фильтрам: {'user_id': 830117694}
+2025-09-09 at 20:59:48 | INFO | Найдено 0 записей.
+2025-09-11 at 19:37:30 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-11 at 19:37:34 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-11 at 19:37:34 | INFO | Подсчет количества записей Table по фильтру: {}
+2025-09-11 at 19:37:34 | INFO | Найдено 5 записей.
+2025-09-11 at 19:37:44 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-11 at 19:37:44 | INFO | Запись Table с ID 1 найдена.
+2025-09-11 at 19:37:44 | INFO | Запись Table с ID 2 найдена.
+2025-09-11 at 19:37:44 | INFO | Запись Table с ID 3 найдена.
+2025-09-11 at 19:37:44 | INFO | Запись Table с ID 4 найдена.
+2025-09-11 at 19:37:44 | INFO | Запись Table с ID 5 найдена.
+2025-09-11 at 19:37:56 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-11 at 19:37:59 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-11 at 19:37:59 | INFO | Подсчет количества записей Table по фильтру: {}
+2025-09-11 at 19:37:59 | INFO | Найдено 5 записей.
+2025-09-11 at 19:38:05 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-11 at 19:38:06 | INFO | Запись Table с ID 1 найдена.
+2025-09-11 at 19:38:06 | INFO | Запись Table с ID 2 найдена.
+2025-09-11 at 19:38:06 | INFO | Запись Table с ID 3 найдена.
+2025-09-11 at 19:38:06 | INFO | Запись Table с ID 4 найдена.
+2025-09-11 at 19:38:06 | INFO | Запись Table с ID 5 найдена.
+2025-09-11 at 19:45:49 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-11 at 19:45:54 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-11 at 19:45:54 | INFO | Подсчет количества записей Table по фильтру: {}
+2025-09-11 at 19:45:54 | INFO | Найдено 5 записей.
+2025-09-11 at 19:45:58 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-11 at 19:45:58 | INFO | Запись Table с ID 1 найдена.
+2025-09-11 at 19:45:58 | INFO | Запись Table с ID 2 найдена.
+2025-09-11 at 19:45:58 | INFO | Запись Table с ID 3 найдена.
+2025-09-11 at 19:45:58 | INFO | Запись Table с ID 4 найдена.
+2025-09-11 at 19:45:58 | INFO | Запись Table с ID 5 найдена.
+2025-09-11 at 19:45:58 | INFO | Запись Table с ID 6 не найдена.
+2025-09-11 at 19:45:58 | INFO | Добавление записи Table с параметрами: {'id': 6, 'capacity': 4, 'description': 'Столик у стены'}
+2025-09-11 at 19:45:58 | INFO | Запись Table успешно добавлена.
+2025-09-11 at 19:45:58 | INFO | Запись Table с ID 7 не найдена.
+2025-09-11 at 19:45:58 | INFO | Добавление записи Table с параметрами: {'id': 7, 'capacity': 2, 'description': 'Романтический столик'}
+2025-09-11 at 19:45:58 | INFO | Запись Table успешно добавлена.
+2025-09-11 at 19:45:58 | INFO | Запись Table с ID 8 не найдена.
+2025-09-11 at 19:45:58 | INFO | Добавление записи Table с параметрами: {'id': 8, 'capacity': 10, 'description': 'Большой банкетный стол'}
+2025-09-11 at 19:45:58 | INFO | Запись Table успешно добавлена.
+2025-09-11 at 19:45:58 | INFO | Запись Table с ID 9 не найдена.
+2025-09-11 at 19:45:58 | INFO | Добавление записи Table с параметрами: {'id': 9, 'capacity': 3, 'description': 'Удобный столик для троих'}
+2025-09-11 at 19:45:58 | INFO | Запись Table успешно добавлена.
+2025-09-11 at 19:45:58 | INFO | Запись Table с ID 10 не найдена.
+2025-09-11 at 19:45:58 | INFO | Добавление записи Table с параметрами: {'id': 10, 'capacity': 5, 'description': 'Столик для небольшой компании'}
+2025-09-11 at 19:45:58 | INFO | Запись Table успешно добавлена.
+2025-09-13 at 14:52:30 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 14:52:30 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-09-13 at 14:52:30 | INFO | Запись User с ID 830117694 найдена.
+2025-09-13 at 14:52:34 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 14:52:38 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 14:52:38 | INFO | Поиск всех записей Table по фильтрам: {'capacity': 2}
+2025-09-13 at 14:52:38 | INFO | Найдено 3 записей.
+2025-09-13 at 14:52:45 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 14:52:45 | INFO | Запись Table с ID 3 найдена.
+2025-09-13 at 14:52:51 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 14:52:57 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 14:52:57 | INFO | Запись Table с ID 4 найдена.
+2025-09-13 at 14:53:03 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 14:53:10 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 14:53:10 | INFO | Запись Table с ID 9 найдена.
+2025-09-13 at 14:54:16 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 14:54:16 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-09-13 at 14:54:16 | INFO | Запись User с ID 830117694 найдена.
+2025-09-13 at 14:54:21 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 14:54:25 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 14:54:25 | INFO | Запись Table с ID 4 найдена.
+2025-09-13 at 14:54:41 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:05:38 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:05:38 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-09-13 at 15:05:38 | INFO | Запись User с ID 830117694 найдена.
+2025-09-13 at 15:05:43 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:05:49 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:05:55 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:05:55 | INFO | Поиск всех записей Booking по фильтрам: {'user_id': 830117694}
+2025-09-13 at 15:05:55 | INFO | Найдено 0 записей.
+2025-09-13 at 15:05:58 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:06:01 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:06:01 | INFO | Поиск всех записей Table по фильтрам: {'capacity': 2}
+2025-09-13 at 15:06:01 | INFO | Найдено 3 записей.
+2025-09-13 at 15:06:09 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:06:09 | INFO | Запись Table с ID 2 найдена.
+2025-09-13 at 15:06:14 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:06:35 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:06:35 | INFO | Запись Table с ID 6 найдена.
+2025-09-13 at 15:06:40 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:06:47 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:06:47 | INFO | Запись Table с ID 4 найдена.
+2025-09-13 at 15:06:53 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:07:29 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:07:29 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-09-13 at 15:07:29 | INFO | Запись User с ID 830117694 найдена.
+2025-09-13 at 15:07:37 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:07:42 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:07:48 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:07:50 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:07:55 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:07:55 | INFO | Поиск всех записей Table по фильтрам: {'capacity': 3}
+2025-09-13 at 15:07:55 | INFO | Найдено 1 записей.
+2025-09-13 at 15:08:13 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:08:13 | INFO | Запись Table с ID 3 найдена.
+2025-09-13 at 15:08:21 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:08:28 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:08:28 | INFO | Запись Table с ID 6 найдена.
+2025-09-13 at 15:08:33 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:12:04 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:12:04 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-09-13 at 15:12:04 | INFO | Запись User с ID 830117694 найдена.
+2025-09-13 at 15:12:08 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:12:08 | INFO | Запись Table с ID 3 найдена.
+2025-09-13 at 15:12:13 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:12:16 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:12:20 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:12:23 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:12:26 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:12:29 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:25:19 | INFO | Добавление нескольких записей TimeSlot. Количество: 9
+2025-09-13 at 15:25:19 | INFO | Успешно добавлено 9 записей.
+2025-09-13 at 15:25:19 | ERROR | Ошибка при добавлении нескольких записей: (sqlalchemy.dialects.postgresql.asyncpg.Error) <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: '06:00' ('str' object has no attribute 'hour')
+[SQL: INSERT INTO time_slots (start_time, end_time) SELECT p0::TIME WITHOUT TIME ZONE, p1::TIME WITHOUT TIME ZONE FROM (VALUES ($1::TIME WITHOUT TIME ZONE, $2::TIME WITHOUT TIME ZONE, 0), ($3::TIME WITHOUT TIME ZONE, $4::TIME WITHOUT TIME ZONE, 1), ($5::TI ... 429 characters truncated ... AS imp_sen(p0, p1, sen_counter) ORDER BY sen_counter RETURNING time_slots.id, time_slots.id AS id__1]
+[parameters: ('06:00', '08:00', '08:00', '10:00', '10:00', '12:00', '12:00', '14:00', '14:00', '16:00', '16:00', '18:00', '18:00', '20:00', '20:00', '22:00', '22:00', '00:00')]
+(Background on this error at: https://sqlalche.me/e/20/dbapi)
+2025-09-13 at 15:29:35 | INFO | Добавление нескольких записей TimeSlot. Количество: 9
+2025-09-13 at 15:29:35 | INFO | Успешно добавлено 9 записей.
+2025-09-13 at 15:30:29 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:30:29 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-09-13 at 15:30:29 | INFO | Запись User с ID 830117694 найдена.
+2025-09-13 at 15:30:32 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:30:35 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:30:37 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:30:37 | INFO | Поиск всех записей Table по фильтрам: {'capacity': 2}
+2025-09-13 at 15:30:37 | INFO | Найдено 3 записей.
+2025-09-13 at 15:30:39 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:30:39 | INFO | Запись Table с ID 2 найдена.
+2025-09-13 at 15:30:44 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:30:50 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:30:53 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:30:53 | INFO | Запись TimeSlot с ID 8 найдена.
+2025-09-13 at 15:30:57 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:30:57 | INFO | 📦 on_confirmation() вызван
+2025-09-13 at 15:30:57 | INFO | Добавление записи Booking с параметрами: {'user_id': 830117694, 'table_id': 2, 'time_slot_id': 8, 'date': datetime.date(2025, 9, 14), 'status': 'booked'}
+2025-09-13 at 15:30:57 | INFO | Запись Booking успешно добавлена.
+2025-09-13 at 15:31:05 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:31:05 | INFO | Поиск всех записей Booking по фильтрам: {'user_id': 830117694}
+2025-09-13 at 15:31:05 | INFO | Найдено 1 записей.
+2025-09-13 at 15:31:15 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:31:30 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:31:34 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:31:37 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:31:38 | INFO | Подсчет количества записей User по фильтру: {}
+2025-09-13 at 15:31:38 | INFO | Найдено 1 записей.
+2025-09-13 at 15:31:43 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:31:45 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:31:52 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:31:56 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:53:55 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:53:57 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:53:57 | INFO | Поиск всех записей Table по фильтрам: {'capacity': 4}
+2025-09-13 at 15:53:57 | INFO | Найдено 2 записей.
+2025-09-13 at 15:54:01 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:54:01 | INFO | Запись Table с ID 4 найдена.
+2025-09-13 at 15:54:06 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:54:06 | INFO | Запись Table с ID 3 найдена.
+2025-09-13 at 15:54:12 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:54:15 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:54:15 | INFO | Запись TimeSlot с ID 6 найдена.
+2025-09-13 at 15:54:22 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:54:22 | INFO | 📦 on_confirmation() вызван
+2025-09-13 at 15:54:22 | INFO | Добавление записи Booking с параметрами: {'user_id': 830117694, 'table_id': 3, 'time_slot_id': 6, 'date': datetime.date(2025, 9, 18), 'status': 'booked'}
+2025-09-13 at 15:54:22 | INFO | Запись Booking успешно добавлена.
+2025-09-13 at 15:54:31 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:54:32 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:54:32 | INFO | Поиск всех записей Table по фильтрам: {'capacity': 1}
+2025-09-13 at 15:54:32 | INFO | Найдено 0 записей.
+2025-09-13 at 15:54:34 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:54:34 | INFO | Запись Table с ID 1 найдена.
+2025-09-13 at 15:54:39 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:54:42 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:54:42 | INFO | Запись TimeSlot с ID 6 найдена.
+2025-09-13 at 15:54:44 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:54:44 | INFO | 📦 on_confirmation() вызван
+2025-09-13 at 15:54:45 | INFO | Добавление записи Booking с параметрами: {'user_id': 830117694, 'table_id': 1, 'time_slot_id': 6, 'date': datetime.date(2025, 9, 14), 'status': 'booked'}
+2025-09-13 at 15:54:45 | INFO | Запись Booking успешно добавлена.
+2025-09-13 at 15:54:46 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:54:48 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:54:48 | INFO | Поиск всех записей Table по фильтрам: {'capacity': 1}
+2025-09-13 at 15:54:48 | INFO | Найдено 0 записей.
+2025-09-13 at 15:54:50 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 15:54:50 | INFO | Запись Table с ID 1 найдена.
+2025-09-13 at 15:54:54 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен

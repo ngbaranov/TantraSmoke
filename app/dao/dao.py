@@ -4,7 +4,7 @@ from typing import Dict
 from loguru import logger
 from sqlalchemy import select, update, delete, func
 from sqlalchemy.exc import SQLAlchemyError
-from sqlalchemy.orm import joinedload
+from sqlalchemy.orm import joinedload, selectinload
 
 from app.dao.base import BaseDAO
 from app.models import User, TimeSlot, Table, Booking
@@ -189,3 +189,22 @@ class BookingDAO(BaseDAO[Booking]):
         except SQLAlchemyError as e:
             logger.error(f"Ошибка при подсчете заявок по статусам: {e}")
             raise
+
+
+    async def get_all_bookings_with_details(self):
+        """Получает все бронирования с полной информацией (юзер, стол, слот)."""
+        try:
+            query = (
+                select(self.model)
+                .options(
+                    selectinload(self.model.user),
+                    selectinload(self.model.table),
+                    selectinload(self.model.time_slot),
+                )
+                .order_by(self.model.date.desc(), self.model.time_slot_id)
+            )
+            result = await self._session.execute(query)
+            return result.scalars().all()
+        except SQLAlchemyError as e:
+            logger.error(f"Ошибка при получении всех бронирований с деталями: {e}")
+            return []

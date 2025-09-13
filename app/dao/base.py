@@ -5,6 +5,7 @@ from sqlalchemy.future import select
 from sqlalchemy import update as sqlalchemy_update, delete as sqlalchemy_delete, func
 from loguru import logger
 from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.orm import selectinload
 
 from app.db import Base
 
@@ -157,3 +158,16 @@ class BaseDAO(Generic[T]):
         except SQLAlchemyError as e:
             logger.error(f"Ошибка при массовом обновлении: {e}")
             raise
+
+    async def get_all_with_details(self, session: AsyncSession):
+        query = (
+            select(self.model)
+            .options(
+                selectinload(self.model.user),
+                selectinload(self.model.table),
+                selectinload(self.model.time_slot),
+            )
+            .order_by(self.model.date.desc(), self.model.time_slot_id)
+        )
+        result = await session.execute(query)
+        return result.scalars().all()

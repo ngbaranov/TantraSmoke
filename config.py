@@ -21,8 +21,9 @@ class Settings(BaseSettings):
 
     ADMIN_IDS_RAW: Optional[str] = ""
 
-
-
+    # Пути к JSON файлам для инициализации данных
+    TABLES_JSON: str = "app/dao/tables.json"
+    SLOTS_JSON: str = "app/dao/slots.json"
 
     model_config = SettingsConfigDict(
         env_file=os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")

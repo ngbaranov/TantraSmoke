@@ -1,7 +1,8 @@
+from datetime import time
 from datetime import datetime
 from sqlalchemy import BigInteger, String
 from app.db import Base
-from sqlalchemy import Integer, Date, ForeignKey
+from sqlalchemy import Integer, Date, ForeignKey, Time
 from sqlalchemy.orm import relationship, Mapped, mapped_column
 
 
@@ -28,18 +29,16 @@ class TimeSlot(Base):
     __tablename__ = "time_slots"
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
-    # Используем String для времени, так как SQLite не имеет встроенного типа Time
-    start_time: Mapped[str] = mapped_column(String(5), nullable=False)  # формат: HH:MM
-    end_time: Mapped[str] = mapped_column(String(5), nullable=False)  # формат: HH:MM
+    start_time: Mapped[time] = mapped_column(Time, nullable=False)
+    end_time: Mapped[time] = mapped_column(Time, nullable=False)
 
     bookings: Mapped[list["Booking"]] = relationship(
         "Booking",
         back_populates="time_slot",
-        cascade="all, delete-orphan"
-    )
+        cascade="all, delete-orphan")
 
-    def __repr__(self) -> str:
-        return f"TimeSlot(id={self.id}, {self.start_time}-{self.end_time})"
+    def __repr__(self):
+        return f"TimeSlot(id={self.id}, start_time={self.start_time}, end_time={self.end_time})"
 
 
 class Booking(Base):

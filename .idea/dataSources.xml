@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:postgresql://166.1.36.152:5432/tantra_smoke_db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="tantra_smoke_db@localhost" uuid="2657b010-0a00-431c-ab09-b8c68a6c6d17">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/tantra_smoke_db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

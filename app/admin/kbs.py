@@ -6,6 +6,7 @@ def main_admin_kb() -> InlineKeyboardMarkup:
     kb = InlineKeyboardBuilder()
     kb.add(InlineKeyboardButton(text="📊 Статистика по пользователям", callback_data="admin_users_stats"))
     kb.add(InlineKeyboardButton(text="📈 Статистика по броням", callback_data="admin_bookings_stats"))
+    kb.add(InlineKeyboardButton(text="🍽️ Инициализировать столы", callback_data="admin_init_tables"))
     kb.add(InlineKeyboardButton(text="🏠 На главную", callback_data="back_home"))
     kb.adjust(1)
     return kb.as_markup()

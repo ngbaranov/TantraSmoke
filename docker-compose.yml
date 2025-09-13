@@ -9,6 +9,8 @@ services:
       - .env
     depends_on:
       - redis
+    volumes:
+      - ./static:/app/static
     networks:
       - bot-net
 
@@ -22,3 +24,5 @@ services:
 networks:
   bot-net:
     driver: bridge
+
+

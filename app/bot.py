@@ -9,12 +9,12 @@ from redis.asyncio import Redis
 
 from app.booking.dialog import booking_dialog
 from config import settings
-from user.router import router as user_router
-from admin.router import router as admin_router
+from app.user.router import router as user_router
+from app.admin.routers.info import router as admin_router
+from app.admin.routers.tables import router as admin_tables_router
 
-from middleware import DBSessionMiddleware, UserEnsureMiddleware
-from db import get_db
-from db import async_session_maker
+from app.middleware import DBSessionMiddleware, UserEnsureMiddleware
+from app.db import async_session_maker
 
 logging.basicConfig(
     level=logging.INFO,
@@ -39,6 +39,7 @@ async def main():
     dp.include_router(booking_dialog)
     dp.include_router(user_router)
     dp.include_router(admin_router)
+    dp.include_router(admin_tables_router)
 
 
 

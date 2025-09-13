@@ -44,11 +44,23 @@ async def on_table_selected(callback: CallbackQuery, button: Button, dialog_mana
         await callback.answer("Стол не найден")
         return
 
+    # Проверяем, что стол подходит по вместимости
+    selected_capacity = dialog_manager.dialog_data.get("capacity")
+    if selected_capacity and table.capacity < selected_capacity:
+        await callback.answer(f"Стол №{table_id} не подходит - вместимость {table.capacity}, а нужно {selected_capacity} мест")
+        return
+
     dialog_manager.dialog_data["selected_table"] = {
         "id": table.id,
         "capacity": table.capacity,
         "description": table.description,
     }
+
+    # Очищаем предыдущие данные о дате и слотах при выборе нового стола
+    dialog_manager.dialog_data.pop("booking_date", None)
+    dialog_manager.dialog_data.pop("slots", None)
+    dialog_manager.dialog_data.pop("selected_slot", None)
+
     await callback.answer(f"Выбран стол №{table_id} на {table.capacity} мест")
     await dialog_manager.next()
 
@@ -68,16 +80,20 @@ async def process_date_selected(callback: CallbackQuery, widget, dialog_manager:
     if slots:
         await callback.answer(f"Выбрана дата: {selected_date}")
         dialog_manager.dialog_data["slots"] = [
-            {"id": s.id, "start_time": s.start_time, "end_time": s.end_time}
+            {
+                "id": s.id,
+                "start_time": s.start_time.strftime("%H:%M"),
+                "end_time": s.end_time.strftime("%H:%M"),
+            }
             for s in slots
         ]
-        await dialog_manager.next()  # ✅ теперь всё уже готово
+        await dialog_manager.next()  # ✅ переходим к выбору слотов
     else:
         await callback.answer(
-            f"Нет мест на {selected_date} для стола №{table_data['id']}!"
+            f"Нет свободных мест на {selected_date} для стола №{table_data['id']}! Выберите другую дату.",
+            show_alert=True
         )
-        await dialog_manager.back()
-
+        # ❌ НЕ вызываем dialog_manager.back() - остаемся на выборе даты!
 
 
 async def process_slots_selected(callback: CallbackQuery, widget, dialog_manager: DialogManager, item_id: str):
@@ -87,8 +103,8 @@ async def process_slots_selected(callback: CallbackQuery, widget, dialog_manager
     slot = await TimeSlotUserDAO(session).find_one_or_none_by_id(slot_id)
     dialog_manager.dialog_data['selected_slot'] = {
         "id": slot.id,
-        "start_time": slot.start_time,
-        "end_time": slot.end_time,
+        "start_time": slot.start_time.strftime("%H:%M"),
+        "end_time": slot.end_time.strftime("%H:%M"),
     }
     await callback.answer(
         f"Выбрано время с {slot.start_time} до {slot.end_time}"

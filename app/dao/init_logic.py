@@ -1,9 +1,10 @@
 import json
+from datetime import time
 from sqlalchemy.ext.asyncio import AsyncSession
 from config import settings
 from app.dao.dao import TableDAO, TimeSlotUserDAO
 from app.db import async_session_maker
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator
 
 
 class TableBase(BaseModel):
@@ -14,6 +15,15 @@ class TableBase(BaseModel):
 class TimeSlotBase(BaseModel):
     start_time: str
     end_time: str
+
+    @field_validator('start_time', 'end_time')
+    @classmethod
+    def parse_time(cls, v):
+        """Преобразует строку времени в объект time."""
+        if isinstance(v, str):
+            hour, minute = map(int, v.split(':'))
+            return time(hour, minute)
+        return v
 
 
 async def add_tables_to_db(session: AsyncSession):
