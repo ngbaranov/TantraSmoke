@@ -44,6 +44,4 @@ class Settings(BaseSettings):
 
 settings = Settings()
 
-# Настройка логгера
-log_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "log.txt")
-logger.add(log_file_path, format="{time:YYYY-MM-DD at HH:mm:ss} | {level} | {message}", level="INFO", rotation="10 MB")
+
