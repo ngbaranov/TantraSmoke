@@ -792,3 +792,9 @@ WHERE tables.capacity = $1::INTEGER]
 2025-09-13 at 15:54:50 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
 2025-09-13 at 15:54:50 | INFO | Запись Table с ID 1 найдена.
 2025-09-13 at 15:54:54 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 18:45:46 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 18:45:46 | INFO | 🔍 Проверка пользователя: 830117694 (@Nikolai_Baranov)
+2025-09-13 at 18:45:48 | INFO | Запись User с ID 830117694 найдена.
+2025-09-13 at 18:45:51 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 18:45:55 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
+2025-09-13 at 18:45:58 | INFO | ✅ MIDDLEWARE: UserEnsureMiddleware активен
